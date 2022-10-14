@@ -1,5 +1,5 @@
 let urunler = [
-	{fiyat: 100, ad: "Ürün 1", indirim: true, oran: 15},
+	{fiyat: 110, ad: "Ürün 1", indirim: true, oran: 15},
 	{fiyat: 150, ad: "Ürün 2", indirim: false, oran: 0},
 	{fiyat: 200, ad: "Ürün 3", indirim: true, oran: 2.5},
 ];
