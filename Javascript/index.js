@@ -1,48 +1,53 @@
-console.log("Loops başlangıç");
+console.log("Merhaba Kodlamaio 2");
 
-// CTRL + K + C => Comment
-// CTRL + K + U => Comment out
-// for (let i = 1; i <= 10; i++) {
-// 	console.log(i);
-// }
+// yorum satırı
+// kod çalıştırılırken dikkate alınmaz.
 
-//dinamik olacak
-let krediler = ["İhtiyaç", "Taşıt", "Araç"];
+// değişkenler ve türleri
+// variable var
+// JAVASCRIPT TIP GUVENLI DEĞİLDİR
+// TYPESCRIPT tip güvenli
 
-//döngüler
-// iterate, iteration
-console.log("<ul>");
-for (let i = 0; i < krediler.length; i++) {
-	console.log("<li>" + krediler[i] + "</li>");
-}
-console.log("</ul>");
-// arrow function
-krediler.forEach(kredi => {
-	console.log("Foreach: ", kredi);
-});
+//number
+let dolarKur = 10;
+console.log(dolarKur);
 
-let urunler = [
-	{fiyat: 100, ad: "Ürün 1", discount: true, rate: 15},
-	{fiyat: 150, ad: "Ürün 2", discount: false, rate: 0},
-	{fiyat: 200, ad: "Ürün 3", discount: true, rate: 2.5},
-];
-// tüm ürünleri gezip fiyatı discount
-// true ise rate kadar indirimli olarak
-// yazdır.
-// %10 indirimli hali 150'tl üzerinde ise
-// consolea "PAHALI" yazsın
-urunler.forEach(urun => {
-	if (urun.discount === true) {
-		urun.fiyat -= urun.fiyat * (urun.rate / 100);
-	}
-	if (urun.fiyat > 150) console.log("PAHALI");
+//string=metinsel ifade
+let euroKur = "15";
+console.log(euroKur);
 
-	console.log(urun);
-});
+// matematiksel operatör
+console.log(dolarKur + 5);
+console.log(euroKur + 10); //! string olduğu için yanlış çalıştı
 
-// Ürünlerden sadece 160 tl üzerindeki ürünleri
-// getir
+// var keywordunu unut!!
+// let
 
-urunler.forEach(urun => {
-	if (urun.fiyat > 160) console.log(urun);
-});
+// boolean = true ya da false
+let euroYukselis = true;
+console.log(euroYukselis);
+
+// number ondalıklı sayı olabilir => decimal,float,double
+dolarKur = 12.52;
+console.log(dolarKur);
+
+// koleksiyonlar
+// array = dizi
+let krediler = ["İhtiyaç", "Taşıt", "Konut"];
+console.log(krediler);
+console.log(krediler[0]);
+
+// object
+// JSON => Javascript Object Notation
+// KEY - VALUE
+// aylikOdeme => 415.53
+
+// Naming Convention
+// camelCase
+let odemeBilgileri = {
+	aylikOdeme: 415.53,
+	faizOrani: 1.89,
+	toplamGeriOdeme: 14950.42,
+	krediTipi: "İhtiyaç Kredisi",
+};
+console.log(odemeBilgileri);
