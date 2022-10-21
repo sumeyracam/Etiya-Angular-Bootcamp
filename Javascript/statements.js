@@ -12,6 +12,7 @@ console.log(1 >= 1); // > >= || =< <
 /// === tip ve değer kontrolü yap
 console.log(1 === "1");
 console.log(1 !== "1");
+
 // condition true ise bloğunu çalıştırır değilse
 // çalıştırmaz..
 if (1 != 1) {
@@ -53,7 +54,7 @@ let secilenKur = "EUR";
 
 switch (secilenKur) {
 	case "USD":
-		toplamBakiye *= 17;
+		toplamBakiye *= 18;
 		break;
 	case "EUR":
 		toplamBakiye *= 20;
