@@ -1,4 +1,4 @@
-function sizCevapVerin() {
+export function sizCevapVerin() {
     return [10, 20, 30, 40, 50];
   }
   
@@ -21,7 +21,7 @@ function sizCevapVerin() {
   
   // Spread Operator
   // bir dizi elemanlarını tek tek parametre olarak gönderir, yani birbirinden ayrıştırır.
-  const cevaplariniz = sizCevapVerin();
+  export const cevaplariniz = sizCevapVerin();
   const result = avg(26, ...cevaplariniz);
   console.log(result);
   // console.log(Math.max(...cevaplariniz));
