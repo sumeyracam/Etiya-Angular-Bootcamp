@@ -65,3 +65,13 @@ cart.forEach(total => {
 });
 
 console.log('CART SUMMARY : ' , result);
+
+let cartTotal = cart.reduce(
+    (acc,cartItem) => acc + cartItem.quantity * cartItem.unitPrice,0
+);
+
+let cartQuantityTotal = cart.reduce((acc, cartItem) => 
+acc + cartItem.quantity, 0,
+);
+console.log(`Toplam Sepet tutarı: ${cartTotal} Sepette toplam ${cartQuantityTotal} adet`
+);
