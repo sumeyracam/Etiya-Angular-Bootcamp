@@ -55,14 +55,14 @@ class UserService {
   const angularCourse = new Course(
          1,
         "Angular Course",
-        "Engin Demiroğ",
+        "Engin Demirog",
         "This course is about Angular",
       );
 
       const javaCourse = new Course(
         2,
        "Java Course",
-       "Engin Demiroğ",
+       "Engin Demirog",
        "This course is about Java",
      );
 
