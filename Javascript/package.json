@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node oop2.js"
+    "start": "node homeworks.js"
   },
   "keywords": [],
   "author": "",
