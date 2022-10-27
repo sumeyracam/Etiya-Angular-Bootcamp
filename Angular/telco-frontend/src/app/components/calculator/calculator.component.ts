@@ -10,6 +10,7 @@ export class CalculatorComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log("dd");
   }
 
 }
