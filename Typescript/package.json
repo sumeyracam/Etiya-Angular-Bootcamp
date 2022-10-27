@@ -1,11 +1,10 @@
 {
-  "name": "javascript",
+  "name": "typescript",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "type": "module",
+  "main": "main.js",
   "scripts": {
-    "start": "node ./Workshops/homework.js"
+    "start": "tsc && node main.js"
   },
   "keywords": [],
   "author": "",
