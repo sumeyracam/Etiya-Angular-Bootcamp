@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductlistComponent implements OnInit {
 
-  constructor() { }
+  products:string[] = ["Laptop","Televizyon","Kulaklık"];
 
-  ngOnInit(): void {
+  name:string = '';
+
+  constructor() {
+
   }
 
+  ngOnInit(): void {
+    this.getProducts();
+  }
+
+  addProducts(name:string){
+    this.products.push(name);
+    this.name = '';
+  }
+  getProducts(){
+    return this.products;
+  }
+  deleteProduct(name:string){
+    this.products = this.products.filter(item => item !== name);
+  }
 }
