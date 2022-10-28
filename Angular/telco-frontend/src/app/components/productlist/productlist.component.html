@@ -8,11 +8,14 @@
     </ul>
     Delete butonuna basıldığında veri silinecek  -->
     
-    <form >
-     
-        <input type="text" id="name" [(ngModel)]="name" name="name"/>
-        <button (click)="addProducts(name)" >Ekle</button>
-      
+    <form [formGroup]="inputForm">
+      <div>
+        <input formControlName="name" type="text" name="name" [(ngModel)]="name" />
+        <p *ngIf="inputForm.get('name')?.hasError('required')"> Ürün adı zorunludur </p>
+      </div>
+      <div>
+        <button (click)="addProducts(name)" [disabled]="inputForm.invalid">Ekle</button>
+      </div>
     </form>
     
     <ul>
@@ -24,4 +27,3 @@
       </ng-container>
     
     </ul>
-      

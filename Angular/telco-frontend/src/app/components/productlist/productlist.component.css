@@ -22,6 +22,10 @@ form{
   label{
     margin-right: 10px;
   }
+
+  .ng-invalid:not(form)  {
+    border: 1px solid red; /* red */
+  }
   
   li{
     width: 15%;
