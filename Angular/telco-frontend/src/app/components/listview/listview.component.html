@@ -1,39 +1,31 @@
-<!-- directive -->
-<!-- ngFor -->
-<!-- ngIf -->
-<ng-container *ngIf="language == 'tr'; else enMessage">
-  <div>Merhaba</div>
-</ng-container>
-
-<ng-template #enMessage>
-  <div>Hello</div>
-</ng-template>
-
-<!--  Kategori ismi 3 haneden kısa ise yazılmasın! -->
-<ul *ngIf="categories">
+<!-- <ul *ngIf="categories">
   <ng-template ngFor let-item [ngForOf]="categories">
-    <li *ngIf="item.name.length > 1">{{ item.id }} {{ item.name }}</li>
+    <li *ngIf="item.name.length > 3 ">{{item.name}}</li>
   </ng-template>
+</ul> -->
+
+<ul>
+  <ng-container *ngFor="let item of categories">
+    <li class="title" *ngIf="item.name.length >3 ">{{item.id}}-{{item.name}}</li>
+    <li class="desc">{{item.description}}</li>
+    <button class="editBtn" (click)="editCategory(item)">Edit</button>
+  </ng-container>
 </ul>
 
+
 <!-- Reactive Form -->
-<h2>Form - Add</h2>
-<form [formGroup]="categoryAddForm" (submit)="add()">
-  <p>{{ error }}</p>
+<h3>{{formTitle}}</h3>
+<p class="err">{{error}}</p>
+<form class="addForm" [formGroup]="categoryAddForm" (submit)="addOrUpdateCategory()">
   <input formControlName="name" type="text" placeholder="Enter name" />
-  <input
-    formControlName="description"
-    type="text"
-    placeholder="Enter description"
-  />
-  <button type="submit">Add</button>
+  <input formControlName="description" type="text" placeholder="Enter description" />
+  <button type="submit" class="addFormBtn">{{formButton}}</button>
 </form>
 
-
-<!-- ngModel Form -->
-<h1>Form - Delete</h1>
-Silecek olan id: {{ categoryIdToDelete }}
+<!-- ngModel Form Two way data binding-->
+<h3>Form Delete</h3>
 <div>
-  <input type="text" placeholder="id" [(ngModel)]="categoryIdToDelete" />
-  <button (click)="delete()">Sil</button>
+  <input type="text" placeholder="id" name="categoryIdToDelete" [(ngModel)]="categoryIdToDelete" />
+  <button (click)="delete()">Delete</button>
 </div>
+{{categoryIdToDelete}}

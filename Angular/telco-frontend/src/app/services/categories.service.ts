@@ -34,6 +34,7 @@ export class CategoriesService {
     );
   }
 
+  
   delete(id: number): Observable<void> {
     return this.httpClient.delete<void>(`${this.controllerUrl}/${id}`);
   }
