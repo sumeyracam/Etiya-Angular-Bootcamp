@@ -53,7 +53,6 @@ export class ListviewComponent implements OnInit {
       this.categories = response;
     });
   }
-
   // changecategoryIdToDelete(event: any) {
   //   this.categoryIdToDelete = event.target.value;
   // }
