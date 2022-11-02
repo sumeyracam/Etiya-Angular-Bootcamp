@@ -1,20 +1,19 @@
-<h3>{{ "Merhaba Angular" }}</h3>
+<app-header></app-header>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
 
-<div class="spinner-container" *ngIf="isLoading">
+
+
+<!-- <div class="spinner-container" *ngIf="isLoading">
   <div class="overlay show"></div>
   <div class="spinner show">
     <div class="loader"></div>
     <p>Loading...</p>
   </div>
-</div>
-
-<!-- 1-10 arası sayıları listeye yazdır.. -->
-<ul>
-  <li *ngFor="let i of 10 | createFakeArray">{{ i }}</li>
-</ul>
+</div> -->
 
 <!-- <h3>{{ title }}</h3>
 <h3>{{ sumOfNumbers(6, 5) }}</h3>
 <button (click)="btnClick()">Tıkla</button>
 <my-calculator></my-calculator> -->
-<app-listview></app-listview>
+<!-- <app-login></app-login> -->
